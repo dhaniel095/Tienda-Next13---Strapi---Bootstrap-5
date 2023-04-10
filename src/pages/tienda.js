@@ -7,12 +7,14 @@ export default function Tienda({ Proteinas }) {
 
   return (
     <Layout>
+
     <div className='container '>
-      <div className='card'>
+      <div className='row'>
 
 
         <main>
-          <h1>Tienda</h1>
+          <h1 className='text-center fw-bolder fs-1'>Tienda</h1>
+          <div>
           <div className={styles.grid}>
             {Proteinas?.map(proteina => (
               <Proteinasp
@@ -20,6 +22,7 @@ export default function Tienda({ Proteinas }) {
              proteina={proteina.attributes}
               />
             ))}
+          </div>
           </div>
 
         </main>

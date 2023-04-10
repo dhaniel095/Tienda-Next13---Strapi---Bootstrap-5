@@ -9,22 +9,23 @@ const Proteinas = ({ proteina }) => {
 
 
   return (
-    <div className="container">
+    
+     
 
-      <div className="card" >
-        <Image src={imagen.data.attributes.url} className="rounded mx-auto d-block img-fluid" height={285} width={200} />
-        <div class="card-body bg-light text-dark">
-          <h2 className="card-title text-warning fw-bolder">{titulo}</h2>
-          <p className="card-text fst-italic">{descripcion}</p>
-          <h2 className="card-text text-danger fw-bold">${precio}</h2>
-          <div class="d-grid gap-2">
-            <Link className="btn btn-danger" type="button" href={`/proteinas/${url}`}>Ver Producto</Link>
+        <div className="text-center" >
+          <Image src={imagen.data.attributes.url} className="" height={285} width={220} />
+          <div class=" ">
+            <h2 className=" text-warning fw-bolder">{titulo}</h2>
+            <p className=" fst-italic">{descripcion}</p>
+            <h2 className=" text-danger fw-bold">${precio}</h2>
+            <div class="d-grid gap-2">
+              <Link className="btn btn-danger" type="button" href={`/proteinas/${url}`}>Ver Producto</Link>
+            </div>
           </div>
         </div>
-      </div>
 
-
-    </div>
+     
+   
   )
 }
 

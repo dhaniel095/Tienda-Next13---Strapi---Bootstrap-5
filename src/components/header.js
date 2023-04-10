@@ -11,8 +11,6 @@ export default function Header() {
     
 
 
-      <div className="row">
-        <div className="">
 
 
 
@@ -31,7 +29,7 @@ export default function Header() {
               </div>
               <div className="text-end">
                 <button type="button" class="btn btn-light me-2">Login</button>
-                <button type="button" class="btn btn-warning">Sign-up</button>
+                <button type="button" class="btn btn-warning">Register</button>
               </div>
               
 
@@ -41,9 +39,7 @@ export default function Header() {
 
 
         </div>
-      </div>
-
-    </div>
+   
 
   )
 

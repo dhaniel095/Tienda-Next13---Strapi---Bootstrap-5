@@ -1,11 +1,24 @@
 import Proteinas from '@/components/Proteinas';
 import '@/styles/globals.css'
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 
 
 export default function App({ Component, pageProps }) {
-  const [carrito, setCarrito] = useState([])
+const carritoLS = typeof window !== 'undefined' ? JSON.parse(localStorage.getItem('carrito')) ?? [] : []
+ 
+const [carrito, setCarrito] = useState(carritoLS)
 
+const [paginaLista, setPaginaLista] = useState(false)
+
+useEffect(() => {
+  setPaginaLista(true)
+},[])
+
+  useEffect(() => {
+localStorage.setItem('carrito', JSON.stringify(carrito))
+  },[carrito]
+  
+  )
 
   const agregarCarrito = Proteinas => {
     // Comprobar si la guitarra ya esta en el carrito...
@@ -29,7 +42,7 @@ export default function App({ Component, pageProps }) {
 
   const eliminarProducto = id => {
     const carritoActualizado = carrito.filter(producto => producto.id != id)
-    setCarrito(ProteinasActualizado)
+    setCarrito(carritoActualizado)
     window.localStorage.setItem('carrito', JSON.stringify(carrito));
   }
 
@@ -45,11 +58,11 @@ export default function App({ Component, pageProps }) {
   }
 
 
-  return <Component {...pageProps}
+  return paginaLista ? <Component {...pageProps}
     carrito={carrito}
     agregarCarrito={agregarCarrito}
     eliminarProducto={eliminarProducto}
     actualizarCantidad={actualizarCantidad}
-  />
+  /> : null
 }
 

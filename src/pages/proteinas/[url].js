@@ -3,6 +3,7 @@ import Layout from "@/components/layout"
 import { useState } from "react"
 
 
+
 export default function producto({ Proteinas, agregarCarrito }) {
 
   const [cantidad, setCantidad] = useState(0)

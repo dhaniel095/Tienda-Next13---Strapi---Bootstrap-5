@@ -7,7 +7,9 @@ const Proteinas = ({ proteina }) => {
   const { titulo, descripcion, precio, imagen, url } = proteina
 
 
+ 
 
+console.log(imagen)
   return (
     
      

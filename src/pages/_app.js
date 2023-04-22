@@ -1,6 +1,7 @@
 import Proteinas from '@/components/Proteinas';
 import '@/styles/globals.css'
 import { useState, useEffect } from 'react'
+import 'semantic-ui-css/semantic.min.css'
 
 
 export default function App({ Component, pageProps }) {

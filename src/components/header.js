@@ -1,5 +1,4 @@
 import Image from 'next/image'
-
 import Link from 'next/link'
 import carrito from 'public/carrito.png'
 import Logopage from 'public/tienda.ico'
@@ -28,8 +27,8 @@ export default function Header() {
               <Link href="/carrito"><Image width={50} height={45} src={carrito} alt="Imagen  Carrito" /></Link>
               </div>
               <div className="text-end">
-                <button type="button" class="btn btn-light me-2">Login</button>
-                <button type="button" class="btn btn-warning">Register</button>
+               <Link href="/join/sign-in"> <button type="button" class="btn btn-light me-2">Login</button></Link>
+               <Link href="/join/sign-up"> <button type="button" class="btn btn-warning">Register</button></Link>
               </div>
               
 

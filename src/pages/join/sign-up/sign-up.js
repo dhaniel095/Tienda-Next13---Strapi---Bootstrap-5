@@ -14,7 +14,7 @@ export default function SignUpPage() {
 
 
 
-                    <Link href="/join/sign-in">Atras</Link>
+                    <Link href="/join/sign-in">Tienes Una cuenta Accede...</Link>
                 </div>
 
             </JoinLayout>
